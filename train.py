@@ -76,7 +76,7 @@ def train():
         target_modules=args.lora_target_modules,
         lora_dropout=args.lora_dropout,
         bias="none",
-        task_type="SEQ_2_SEQ_LM",
+        task_type="CAUSAL_LM",
     )
     model = get_peft_model(model, config)
     model.print_trainable_parameters()
