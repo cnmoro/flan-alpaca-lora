@@ -58,7 +58,7 @@ def train():
                      "To save the memory, you may set load_in_8bit to True.")
 
 
-    model = transformers.AutoModelForSeq2SeqLM.from_pretrained(
+    model = transformers.AutoModelForCausalLM.from_pretrained(
         args.model_name_or_path,
         load_in_8bit=args.load_in_8bit,
         use_cache=False,
